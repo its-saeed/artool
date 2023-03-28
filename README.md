@@ -7,7 +7,7 @@ Logs is expected to be like this:
 [7f3606ffd6c0][21-03-22T10:18:49.218][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED DUMMY_LOG this is a dummy log 34.21.222.37 just for testing
 ```
 
-We have `ARTEM_SAEED` as the magic phrase. Then `log_type` should be present. `log_type` is supposed to have only uppercase letters and `_` . For example here `DUMMY_LOG` is the log type.
+We have `ARTEM_SAEED` as the magic phrase. Then `log_type` should be present. `log_type` is supposed to have only UPPERCASE letters and `_` . Technically speaking, it should be in `[A-Z_]+` format. For example here `DUMMY_LOG` is the log type.
 
 1. Define your log type like what we did already:
 ```python
