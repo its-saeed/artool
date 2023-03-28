@@ -23,5 +23,5 @@ LOG_TYPE_DUMMY = "DUMMY"      # For testing this script
 
 # How to run
 ```bash
-./python3 artool.py folder_path_containing_logs
+python3 artool.py folder_path_containing_logs
 ```
