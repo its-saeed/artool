@@ -4,6 +4,7 @@ import re
 MAGIC = "ARTEM_SAEED"
 
 LOG_TYPE_INTRO = "INTRO"
+DNS_TABLE = {}
 
 def parse_line(line):
     line_pattern = "(?:\[[^\]]*\])(?:\[(?P<timestamp>[^\]]*)\])(?:\[[^\]]*\])(?:\[[^\]]*\]) ARTEM_SAEED (?P<log_type>[A-Z]+) (?P<log>.*)"
@@ -23,6 +24,9 @@ def process_line(parsed_line):
     if "log_type" not in parsed_line:
         raise ValueError("Parsed line doesn't have log_type")
 
+    if "log" not in parsed_line:
+        raise ValueError("Parsed line doesn't have log")
+
     log_type = parsed_line["log_type"]
     if log_type == LOG_TYPE_INTRO:
         process_intro(parsed_line)
@@ -30,11 +34,18 @@ def process_line(parsed_line):
         raise ValueError(f"Log type {log_type} is unknown")
 
 def process_intro(parsed_line):
-    print(parsed_line["log"])
+    intro_pattern = "my role is (?P<hostname>[\w-]+), my IP is (?P<ip>[\d\.]+)"
+    matched = re.match(intro_pattern, parsed_line["log"])
+    
+    if matched:
+        ip = matched.group("ip")
+        hostname = matched.group("hostname")
+        DNS_TABLE[ip] = hostname
+    else:
+        raise ValueError("{LOG_TYPE_INTRO} is malformed", )
 
 def process_file(filename):
     os.system(f'grep {MAGIC} {filename} > /tmp/{filename}')
-    parsed = []
     with open(f"/tmp/{filename}") as file:
         for line in file:
             try:
@@ -43,6 +54,7 @@ def process_file(filename):
             except ValueError as err:
                 print(err.args)
 
+    print(DNS_TABLE)
 
 if __name__ == "__main__":
     process_file("sample.log")
