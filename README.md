@@ -20,3 +20,8 @@ LOG_TYPE_DUMMY = "DUMMY"      # For testing this script
 ```
 2. let's assume you want to add `foo_log`. You need to define a function named `process_foo_log`. Do whatever you want to do with these class of logs in the function.
 3. Don't forget to add this function and it's `elif` entry in `process_line` function.
+
+# How to run
+```bash
+./python3 artool.py folder_path_containing_logs
+```

@@ -1,12 +1,14 @@
 import os
 import re
 from datetime import datetime
+import sys
 
 MAGIC = "ARTEM_SAEED"
 
 LOG_TYPE_INTRO = "INTRO"
 LOG_TYPE_DNS_TEST = "DNS_TEST"      # For testing this script
 LOG_TYPE_DUMMY = "DUMMY"      # For testing this script
+
 DNS_TABLE = {}
 FILTERED_LOGS = []
 
@@ -111,4 +113,7 @@ def process_folder(rootdir):
         print(log["timestamp"], log["log"])
 
 if __name__ == "__main__":
-    process_folder("sample_logs")
+    if len(sys.argv) == 1:
+        print("Please provide the root folder path")
+    else:
+        process_folder(sys.argv[1])
