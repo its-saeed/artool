@@ -1,7 +1,7 @@
 # Artool
 This tool is proposed by Artem and supposed to help him. That's why it's called Artool :D
 
-# How to add new log type
+# How to add a new log type
 Logs is expected to be like this:
 ```log
 [7f3606ffd6c0][21-03-22T10:18:49.218][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED DUMMY_LOG this is a dummy log 34.21.222.37 just for testing
@@ -18,5 +18,5 @@ LOG_TYPE_INTRO = "INTRO"
 LOG_TYPE_DNS_TEST = "DNS_TEST"      # For testing this script
 LOG_TYPE_DUMMY = "DUMMY"      # For testing this script
 ```
-2. let's supposed you want to add `foo_log`. You need to define a function named `process_foo_log`. Do whatever you want to do with these class of logs in the function.
+2. let's assume you want to add `foo_log`. You need to define a function named `process_foo_log`. Do whatever you want to do with these class of logs in the function.
 3. Don't forget to add this function and it's `elif` entry in `process_line` function.
