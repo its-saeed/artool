@@ -1,0 +1,13 @@
+[7f3606ffd6c0][23-03-27T10:19:49.195][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED DNS_TEST this is for dns test 34.15.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.196][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED INTRO my role is seedpub-1, my IP is 34.12.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.197][EvmClient.cpp:185   ][CallRunner          ] junk line
+[7f3606ffd6c0][23-03-27T10:19:49.198][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED INTRO my role is seedpub-2, my IP is 34.18.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.199][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED INTRO my role is seedpub-3, my IP is 34.15.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.200][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED INTRO my role is seedpub-4, my IP is 34.25.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.202][EvmClient.cpp:185   ][CallRunner          ] junk line
+[7f3606ffd6c0][23-03-27T10:19:49.204][EvmClient.cpp:185   ][CallRunner          ] junk line
+[7f3606ffd6c0][23-03-27T10:19:49.205][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED INTRO my role is seedpub-4, my IP is 33.33.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.213][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED DNS_TEST this is for dns test 33.33.36.37
+[7f3606ffd6c0][23-03-27T10:19:49.214][EvmClient.cpp:185   ][CallRunner          ] junk line
+[7f3606ffd6c0][23-03-27T10:19:49.214][EvmClient.cpp:185   ][CallRunner          ] junk line
+[7f3606ffd6c0][23-03-27T10:19:49.218][EvmClient.cpp:185   ][CallRunner          ] ARTEM_SAEED DUMMY this is a dummy log 33.33.36.37 just for testing
